@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">BankAccounts</string>
+    <string name="login">Login</string>
+    <string name="id">ID</string>
+    <string name="id_hashed">Hashed_id</string>
+    <string name="amount">Amount</string>
+    <string name="iban">Iban</string>
+    <string name="accountName">accountName</string>
+    <string name="currency">Currency</string>
+    <string name="name">Name</string>
+    <string name="lastName">lastName</string>
 </resources>
