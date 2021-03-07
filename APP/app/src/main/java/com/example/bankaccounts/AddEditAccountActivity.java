@@ -17,6 +17,7 @@ public class AddEditAccountActivity extends AppCompatActivity {
     private TextView textIban;
     private TextView textCurrency;
     private Button buttonReturn;
+    private Button buttonUpdate;
 
     private Accounts account;
 
@@ -30,19 +31,33 @@ public class AddEditAccountActivity extends AppCompatActivity {
         this.textCurrency = (TextView)this.findViewById(R.id.Text_currency);
 
         this.buttonReturn = (Button)findViewById(R.id.button_return);
+        this.buttonUpdate = (Button)findViewById(R.id.button_update);
 
         this.buttonReturn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)  {
-                buttonCancelClicked();
+                buttonDeleteClicked();
+            }
+        });
+        this.buttonUpdate.setOnClickListener(new View.OnClickListener(){
+                public void onClick (View v){
+                buttonUpdateClicked();
             }
         });
     }
 
     // User Click on the Cancel button.
-    public void buttonCancelClicked()  {
+    public void buttonDeleteClicked()  {
         // Do nothing, back MainActivity.
         this.onBackPressed();
         setContentView(R.layout.activity_login);
+    }
+
+    // User Click on the Cancel button.
+    public void buttonUpdateClicked()  {
+        // Do nothing, back MainActivity.
+        this.onBackPressed();
+        //call the syncAccount function
+        setContentView(R.layout.activity_add_edit_account);
     }
 
     // When completed this Activity,
