@@ -15,7 +15,11 @@ SECURE
 
 The informations are stored in a SQLite3 database which is a secure database with some restrictions of access.
 Your ID is stored hashed (sha-512) to protect from being retrieved.
-To go further we could also add some "salt" in the ID before the hash, and encrypt the rest of the informations (amount, iban, currency)
+To go further we could also add some "salt" in the ID before the hash, and encrypt the rest of the informations (amount, iban, currency).
+
+HIDE URL
+
+To hide the url, we hide it in the Environmental variable (in the build.gradle and gradle.properties)
 
 SCREENSHOTS
 
