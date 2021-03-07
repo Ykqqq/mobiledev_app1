@@ -2,6 +2,12 @@ plugins {
     id 'com.android.application'
 }
 
+def URL = '"' + WEBURL + '"' ?: '"Define URL"';
+
+android.buildTypes.each { type ->
+    type.buildConfigField 'String', 'URL', WEBURL
+}
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"

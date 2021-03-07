@@ -104,7 +104,7 @@ public class MyDatabase extends SQLiteOpenHelper{
     }
 
     public void syncAccount(String id){
-        AndroidNetworking.get("http://60102f166c21e10017050128.mockapi.io/labbbank/accounts/")
+        AndroidNetworking.get(BuildConfig.URL)
                 .build()
                 .getAsObject(Accounts.class, new ParsedRequestListener<JSONArray>() {
                     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
